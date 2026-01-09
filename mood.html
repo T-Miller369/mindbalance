@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>MindBalance: Mood Tracker</title>
+    <link rel="stylesheet" href="App Webpage Styling.css" />
+  </head>
+  <body>
+    <!-- Top navigation (desktop) -->
+    <nav class="top-nav">
+      <div class="top-nav-inner">
+        <a href="index.html" class="nav-logo">
+          <div class="nav-logo-mark">MB</div>
+          <span>MindBalance</span>
+        </a>
+        <div class="top-nav-links">
+          <a href="index.html" class="nav-link">
+            <span class="nav-link-icon">🏠</span><span>Home</span>
+          </a>
+          <a href="mood.html" class="nav-link active">
+            <span class="nav-link-icon">😊</span><span>Mood</span>
+          </a>
+          <a href="tools.html" class="nav-link">
+            <span class="nav-link-icon">🌿</span><span>Tools</span>
+          </a>
+          <a href="sleep.html" class="nav-link">
+            <span class="nav-link-icon">🌙</span><span>Sleep</span>
+          </a>
+          <a href="privacy.html" class="nav-link">
+            <span class="nav-link-icon">🔒</span><span>Privacy</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <header>
+      <div class="header-inner">
+        <h1>Mood Tracker</h1>
+        <p>Log your feelings, notice your patterns, and respond with more clarity and kindness.</p>
+      </div>
+      <div class="header-illustration">
+        <span>📈</span>
+      </div>
+    </header>
+
+    <div class="page">
+      <main>
+        <section>
+          <h2>About the Mood Tracker</h2>
+          <div class="about">
+            <p>
+              The Mood Tracker is designed to help you understand your emotional patterns over time.
+              With a simple daily check-in, you can quickly log how you feel using an intuitive scale.
+              Over days and weeks, these entries build into a mental snapshot of your life—revealing
+              how routines, stress, sleep, and social energy shape your mood.
+            </p>
+            <p>
+              This isn’t about judging how you feel. It’s about awareness. When you can name your
+              patterns, you can care for yourself more intentionally—whether that means building in
+              recovery time before big deadlines, protecting the habits that keep you grounded, or
+              noticing early signs of burnout before they peak.
+            </p>
+          </div>
+        </section>
+
+        <section>
+          <h2>Try a quick check-in</h2>
+          <p class="section-subtitle">
+            Use this slider as a preview of how MindBalance could feel as a daily practice.
+          </p>
+
+          <div class="mood-layout">
+            <div class="mood-card">
+              <h3>How are you feeling right now?</h3>
+              <div class="mood-slider-row">
+                <span class="mood-emoji" id="mood-emoji">😊</span>
+                <input
+                  type="range"
+                  id="mood-slider"
+                  min="1"
+                  max="5"
+                  step="1"
+                  value="3"
+                />
+              </div>
+              <div class="mood-label" id="mood-label">
+                Neutral or mixed
+              </div>
+              <div id="mood-visual">
+                This color shifts with you, moving from heavier tones to brighter ones as your check-in
+                changes. Every state matters—this is just a visual cue, not a value judgment.
+              </div>
+            </div>
+
+            <div class="mood-card">
+              <h3>Make sense of the pattern</h3>
+              <p>
+                Imagine pairing this mood slider with simple notes like “study day,” “family time,”
+                or “barely slept.” Over time, these tiny reflections become a map of what supports
+                your well-being—and what quietly drains it.
+              </p>
+              <p>
+                Future versions of MindBalance will help you spot these trends more clearly, nudge you
+                toward supportive habits, and celebrate even the small wins you might otherwise miss.
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        &copy; 2025 MindBalance. All rights reserved.
+      </footer>
+    </div>
+
+    <!-- Bottom navigation (mobile) -->
+    <nav class="bottom-nav">
+      <div class="bottom-nav-inner">
+        <a href="index.html" class="bottom-nav-link">
+          <span class="bottom-nav-icon">🏠</span>
+          <span>Home</span>
+        </a>
+        <a href="mood.html" class="bottom-nav-link active">
+          <span class="bottom-nav-icon">😊</span>
+          <span>Mood</span>
+        </a>
+        <a href="tools.html" class="bottom-nav-link">
+          <span class="bottom-nav-icon">🌿</span>
+          <span>Tools</span>
+        </a>
+        <a href="sleep.html" class="bottom-nav-link">
+          <span class="bottom-nav-icon">🌙</span>
+          <span>Sleep</span>
+        </a>
+        <a href="privacy.html" class="bottom-nav-link">
+          <span class="bottom-nav-icon">🔒</span>
+          <span>Privacy</span>
+        </a>
+      </div>
+    </nav>
+
+    <script src="app.js"></script>
+  </body>
+</html>

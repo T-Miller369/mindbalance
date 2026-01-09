@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>MindBalance: Sleep Support</title>
+    <link rel="stylesheet" href="App Webpage Styling.css" />
+  </head>
+  <body>
+    <!-- Top navigation (desktop) -->
+    <nav class="top-nav">
+      <div class="top-nav-inner">
+        <a href="index.html" class="nav-logo">
+          <div class="nav-logo-mark">MB</div>
+          <span>MindBalance</span>
+        </a>
+        <div class="top-nav-links">
+          <a href="index.html" class="nav-link">
+            <span class="nav-link-icon">🏠</span><span>Home</span>
+          </a>
+          <a href="mood.html" class="nav-link">
+            <span class="nav-link-icon">😊</span><span>Mood</span>
+          </a>
+          <a href="tools.html" class="nav-link">
+            <span class="nav-link-icon">🌿</span><span>Tools</span>
+          </a>
+          <a href="sleep.html" class="nav-link active">
+            <span class="nav-link-icon">🌙</span><span>Sleep</span>
+          </a>
+          <a href="privacy.html" class="nav-link">
+            <span class="nav-link-icon">🔒</span><span>Privacy</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <header>
+      <div class="header-inner">
+        <h1>Sleep Support</h1>
+        <p>
+          Gentle structure for winding down—so your brain doesn’t have to sprint right up until sleep.
+        </p>
+      </div>
+      <div class="header-illustration">
+        <span>💤</span>
+      </div>
+    </header>
+
+    <div class="page">
+      <main>
+        <section>
+          <h2>About Sleep Support</h2>
+          <div class="about">
+            <p>
+              Sleep Support is for the nights when your body is tired but your mind is still refreshing
+              every tab it can find. Instead of adding another endless feed, MindBalance offers small,
+              predictable rituals you can repeat—like a timer, a visual fade-out, and prompts to step
+              away from your screen.
+            </p>
+            <p>
+              Over time, these cues help train your brain to shift from problem-solving mode into rest.
+              The goal isn’t “perfect sleep”; it’s giving your nervous system consistent signals that
+              it’s safe to slow down, even when your schedule and stress levels are intense.
+            </p>
+          </div>
+        </section>
+
+        <section>
+          <h2>Set a simple wind-down timer</h2>
+          <p class="section-subtitle">
+            Use this as a small commitment: “For this many minutes, I’m letting myself land.”
+          </p>
+
+          <div class="sleep-layout">
+            <div class="sleep-card">
+              <div class="sleep-card-inner">
+                <h3>Wind-down timer</h3>
+                <p>
+                  Choose a time window to step back from intense tasks, social media, or notifications.
+                  You can stretch, read, breathe—anything that feels like landing instead of sprinting.
+                </p>
+                <div class="sleep-controls">
+                  <label for="sleep-minutes">Minutes:</label>
+                  <input
+                    type="number"
+                    id="sleep-minutes"
+                    min="1"
+                    max="180"
+                    value="10"
+                  />
+                  <button type="button" id="start-sleep-timer">Start</button>
+                </div>
+                <div id="sleep-countdown">
+                  Set a time to begin.
+                </div>
+                <p class="sleep-note">
+                  Pro tip: put your device down while the timer runs. The more consistently you pair this
+                  space with rest, the easier it becomes to access it later.
+                </p>
+              </div>
+            </div>
+
+            <div class="about">
+              <p>
+                A future version of MindBalance could combine this timer with soundscapes, gentle dimming
+                animations, and recommendations based on your typical sleep window—without asking you to
+                share sensitive data or sign up for an account.
+              </p>
+              <p>
+                For now, even small intentional pauses can make a real difference: five minutes of quiet
+                breathing, a warm drink, or journaling away tomorrow’s to-do list before you lie down.
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        &copy; 2025 MindBalance. All rights reserved.
+      </footer>
+    </div>
+
+    <!-- Bottom navigation (mobile) -->
+    <nav class="bottom-nav">
+      <div class="bottom-nav-inner">
+        <a href="index.html" class="bottom-nav-link">
+          <span class="bottom-nav-icon">🏠</span>
+          <span>Home</span>
+        </a>
+        <a href="mood.html" class="bottom-nav-link">
+          <span class="bottom-nav-icon">😊</span>
+          <span>Mood</span>
+        </a>
+        <a href="tools.html" class="bottom-nav-link">
+          <span class="bottom-nav-icon">🌿</span>
+          <span>Tools</span>
+        </a>
+        <a href="sleep.html" class="bottom-nav-link active">
+          <span class="bottom-nav-icon">🌙</span>
+          <span>Sleep</span>
+        </a>
+        <a href="privacy.html" class="bottom-nav-link">
+          <span class="bottom-nav-icon">🔒</span>
+          <span>Privacy</span>
+        </a>
+      </div>
+    </nav>
+
+    <script src="app.js"></script>
+  </body>
+</html>

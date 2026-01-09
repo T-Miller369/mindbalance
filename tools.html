@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>MindBalance: Guided Tools</title>
+    <link rel="stylesheet" href="App Webpage Styling.css" />
+  </head>
+  <body>
+    <!-- Top navigation (desktop) -->
+    <nav class="top-nav">
+      <div class="top-nav-inner">
+        <a href="index.html" class="nav-logo">
+          <div class="nav-logo-mark">MB</div>
+          <span>MindBalance</span>
+        </a>
+        <div class="top-nav-links">
+          <a href="index.html" class="nav-link">
+            <span class="nav-link-icon">🏠</span><span>Home</span>
+          </a>
+          <a href="mood.html" class="nav-link">
+            <span class="nav-link-icon">😊</span><span>Mood</span>
+          </a>
+          <a href="tools.html" class="nav-link active">
+            <span class="nav-link-icon">🌿</span><span>Tools</span>
+          </a>
+          <a href="sleep.html" class="nav-link">
+            <span class="nav-link-icon">🌙</span><span>Sleep</span>
+          </a>
+          <a href="privacy.html" class="nav-link">
+            <span class="nav-link-icon">🔒</span><span>Privacy</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <header>
+      <div class="header-inner">
+        <h1>Guided Tools</h1>
+        <p>
+          Breathe, ground, and reflect—short, structured exercises you can use in the middle of real life.
+        </p>
+      </div>
+      <div class="header-illustration">
+        <span>🌬️</span>
+      </div>
+    </header>
+
+    <div class="page">
+      <main>
+        <section>
+          <h2>About the guided tools</h2>
+          <div class="about">
+            <p>
+              The Guided Tools are built for the moments when your mind feels loud: before a test,
+              after a tough conversation, or when you’re scrolling and suddenly realize your chest
+              feels tight. Each exercise is short on purpose—you don’t have to “fix everything,” just
+              pause long enough to reset.
+            </p>
+            <p>
+              From breathing patterns that steady your nervous system to grounding techniques that
+              bring you back into the present, these tools are designed to be realistic, repeatable,
+              and kind. You don’t need perfect focus to use them—just a willingness to try for a few
+              seconds at a time.
+            </p>
+          </div>
+        </section>
+
+        <section>
+          <h2>Try the tools</h2>
+          <p class="section-subtitle">
+            Experiment with a few of the exercises MindBalance will offer. Use what works, leave what
+            doesn’t.
+          </p>
+
+          <div class="tools-grid">
+            <!-- Breathing card -->
+            <div class="tool-card">
+              <h3>Guided breathing</h3>
+              <p>
+                A simple 4–4–4–4 pattern to help your body remember what calm feels like. No need to
+                match it perfectly—just let it set the pace.
+              </p>
+              <div class="breath-circle-wrapper">
+                <div id="breath-circle">
+                  <span id="breath-text">Tap Start to begin</span>
+                </div>
+                <button type="button" id="breath-toggle">Start</button>
+              </div>
+            </div>
+
+            <!-- Journaling prompts card -->
+            <div class="tool-card">
+              <h3>Journaling prompt</h3>
+              <p>
+                When your thoughts feel tangled, sometimes a single question can create just enough
+                space to breathe and sort them out.
+              </p>
+              <button type="button" id="new-prompt-btn">New prompt</button>
+              <div id="journal-prompt">
+                <!-- Filled by JS -->
+              </div>
+            </div>
+
+            <!-- Grounding card -->
+            <div class="tool-card">
+              <h3>5-4-3-2-1 grounding</h3>
+              <p>
+                When your brain is racing, this sensory check-in helps anchor you in the present
+                moment—one sense at a time.
+              </p>
+              <button type="button" id="grounding-next-btn">Next step</button>
+              <div id="grounding-step">
+                Tap Next to begin the grounding sequence.
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        &copy; 2025 MindBalance. All rights reserved.
+      </footer>
+    </div>
+
+    <!-- Bottom navigation (mobile) -->
+    <nav class="bottom-nav">
+      <div class="bottom-nav-inner">
+        <a href="index.html" class="bottom-nav-link">
+          <span class="bottom-nav-icon">🏠</span>
+          <span>Home</span>
+        </a>
+        <a href="mood.html" class="bottom-nav-link">
+          <span class="bottom-nav-icon">😊</span>
+          <span>Mood</span>
+        </a>
+        <a href="tools.html" class="bottom-nav-link active">
+          <span class="bottom-nav-icon">🌿</span>
+          <span>Tools</span>
+        </a>
+        <a href="sleep.html" class="bottom-nav-link">
+          <span class="bottom-nav-icon">🌙</span>
+          <span>Sleep</span>
+        </a>
+        <a href="privacy.html" class="bottom-nav-link">
+          <span class="bottom-nav-icon">🔒</span>
+          <span>Privacy</span>
+        </a>
+      </div>
+    </nav>
+
+    <script src="app.js"></script>
+  </body>
+</html>
