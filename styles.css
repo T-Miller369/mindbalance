@@ -135,6 +135,18 @@ main {
   box-shadow: var(--shadow-soft);
 }
 
+.home-footer {
+  margin-top: 2rem;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  opacity: 0.85;
+}
+
+.home-footer p {
+  margin: 0.3rem 0;
+}
+
 /* Journal */
 .journal-controls {
   display: flex;
