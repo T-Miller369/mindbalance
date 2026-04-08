@@ -1,142 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
-    <title>MindBalance | Home</title>
-    <link rel="stylesheet" href="App Webpage Styling.css" />
-    <link rel="icon" type="image/png" href="favicon.png" />
-  </head>
-  <body>
-    <!-- Top navigation (desktop) -->
-    <nav class="top-nav">
-      <div class="top-nav-inner">
-        <a href="index.html" class="nav-logo">
-          <div class="nav-logo-mark">MB</div>
-          <span>MindBalance</span>
-        </a>
-        <div class="top-nav-links">
-          <a href="index.html" class="nav-link active">
-            <span class="nav-link-icon">🏠</span><span>Home</span>
-          </a>
-          <a href="mood.html" class="nav-link">
-            <span class="nav-link-icon">😊</span><span>Mood</span>
-          </a>
-          <a href="tools.html" class="nav-link">
-            <span class="nav-link-icon">🌿</span><span>Tools</span>
-          </a>
-          <a href="sleep.html" class="nav-link">
-            <span class="nav-link-icon">🌙</span><span>Sleep</span>
-          </a>
-          <a href="privacy.html" class="nav-link">
-            <span class="nav-link-icon">🔒</span><span>Privacy</span>
-          </a>
+<head>
+  <meta charset="UTF-8">
+  <title>MindBalance App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-calm-ocean">
+  <header class="mb-header">
+    <h1 class="mb-logo">MindBalance</h1>
+    <p class="mb-subtitle" id="greetingText">Your daily reset.</p>
+  </header>
+
+  <main>
+    <!-- Home / Balance Hub -->
+    <section id="homeSection" class="mb-section active">
+      <div class="circle-grid">
+        <button class="circle-card" data-target="journalSection">
+          <span>Journal</span>
+        </button>
+        <button class="circle-card" data-target="sleepSection">
+          <span>Sleep</span>
+        </button>
+        <button class="circle-card" data-target="breathingSection">
+          <span>Breathe</span>
+        </button>
+        <button class="circle-card" data-target="themesSection">
+          <span>Themes</span>
+        </button>
+      </div>
+
+      <section class="today-reset">
+        <h2>Today’s Reset</h2>
+        <p id="todayResetText"></p>
+      </section>
+    </section>
+
+    <!-- Journal – MindSpace -->
+    <section id="journalSection" class="mb-section">
+      <h2>MindSpace Journal</h2>
+
+      <div class="journal-controls">
+        <label for="journalPromptSelect">Choose a prompt:</label>
+        <select id="journalPromptSelect">
+          <option value="gratitude">Gratitude</option>
+          <option value="micro">Small joys</option>
+          <option value="mood">Mood reflection</option>
+          <option value="free">Free write</option>
+        </select>
+        <button id="newPromptBtn">New prompt</button>
+      </div>
+
+      <div class="journal-prompt-box">
+        <p id="journalPromptText"></p>
+      </div>
+
+      <textarea id="journalEntry" placeholder="Write your thoughts here..."></textarea>
+      <button id="saveJournalBtn">Save entry</button>
+
+      <div class="journal-history">
+        <h3>Recent entries</h3>
+        <ul id="journalList"></ul>
+      </div>
+    </section>
+
+    <!-- Sleep – DreamHaven -->
+    <section id="sleepSection" class="mb-section night-theme">
+      <h2>DreamHaven</h2>
+
+      <div class="sleep-layout">
+        <div class="sleep-form">
+          <label>Hours slept last night:
+            <input type="number" id="sleepHours" min="0" max="14" step="0.5">
+          </label>
+          <label>Sleep quality (1–10):
+            <input type="range" id="sleepQuality" min="1" max="10">
+          </label>
+          <button id="logSleepBtn">Log sleep</button>
+        </div>
+
+        <div class="sleep-companion-card">
+          <h3>Your companion</h3>
+          <select id="companionSelect">
+            <option value="fox">Fox</option>
+            <option value="owl">Owl</option>
+            <option value="cat">Cat</option>
+            <option value="dragon">Dragon</option>
+            <option value="jellyfish">Jellyfish</option>
+          </select>
+          <div class="companion-visual">
+            <div id="companionAvatar" class="companion-avatar"></div>
+            <p id="companionStatusText"></p>
+          </div>
+        </div>
+
+        <div class="sleep-stats-card">
+          <h3>Sleep streak</h3>
+          <div class="sleep-ring">
+            <div class="sleep-ring-inner" id="sleepRingInner"></div>
+          </div>
+          <p id="sleepStatsText"></p>
         </div>
       </div>
-    </nav>
 
-    <!-- Header -->
-    <header>
-      <div class="header-inner">
-        <h1>MindBalance</h1>
-        <p>Your pocket companion for mental clarity, calm, and self-awareness.</p>
+      <div class="night-sky">
+        <div class="moon"></div>
+        <div class="stars"></div>
       </div>
-      <div class="header-illustration">
-        <span>🌊</span>
+    </section>
+
+    <!-- Breathing – BreatheFlow -->
+    <section id="breathingSection" class="mb-section">
+      <h2>BreatheFlow</h2>
+
+      <div class="breathing-controls">
+        <label for="breathingModeSelect">Mode:</label>
+        <select id="breathingModeSelect">
+          <option value="box">Box (4–4–4–4)</option>
+          <option value="478">4–7–8</option>
+          <option value="simple">Simple in/out</option>
+        </select>
+        <label>
+          <input type="checkbox" id="breathingTextCues" checked>
+          Show text cues
+        </label>
+        <button id="startBreathingBtn">Start</button>
+        <button id="stopBreathingBtn">Stop</button>
       </div>
-    </header>
 
-    <div class="page">
-      <main>
-        <section>
-          <h2>Explore MindBalance</h2>
-          <p class="section-subtitle">
-            Simple, science-informed tools you can use in real time—built to support students, creators,
-            and anyone balancing a lot at once.
-          </p>
-          <div class="features">
-            <a href="mood.html" class="feature-card">
-              <div class="feature-icon">😊</div>
-              <div class="feature-title">Mood Tracker</div>
-              <div class="feature-desc">
-                Log how you feel in seconds, spot patterns over time, and notice what actually supports your mood.
-              </div>
-            </a>
-
-            <a href="tools.html" class="feature-card">
-              <div class="feature-icon">🌿</div>
-              <div class="feature-title">Guided Tools</div>
-              <div class="feature-desc">
-                Breathing, grounding, and reflection exercises you can tap into whenever things feel too loud.
-              </div>
-            </a>
-
-            <a href="sleep.html" class="feature-card">
-              <div class="feature-icon">🌙</div>
-              <div class="feature-title">Sleep Support</div>
-              <div class="feature-desc">
-                Gentle timers and calming visuals to help you wind down without doom-scrolling to the last minute.
-              </div>
-            </a>
-
-            <a href="privacy.html" class="feature-card">
-              <div class="feature-icon">🔒</div>
-              <div class="feature-title">Privacy First</div>
-              <div class="feature-desc">
-                Your reflections stay with you. No accounts, no tracking, no surprises—just a space that’s yours.
-              </div>
-            </a>
-          </div>
-        </section>
-
-        <section>
-          <h2>Coming soon</h2>
-          <p class="section-subtitle">
-            MindBalance is in early development for iOS and Android. Get a gentle reminder when it’s ready.
-          </p>
-          <form class="inline-form">
-            <input type="email" placeholder="Your email" required />
-            <button type="submit">Notify me</button>
-          </form>
-        </section>
-      </main>
-
-      <footer>
-        &copy; 2025 MindBalance. All rights reserved.
-      </footer>
-    </div>
-
-    <!-- Bottom navigation (mobile) -->
-    <nav class="bottom-nav">
-      <div class="bottom-nav-inner">
-        <a href="index.html" class="bottom-nav-link active">
-          <span class="bottom-nav-icon">🏠</span>
-          <span>Home</span>
-        </a>
-        <a href="mood.html" class="bottom-nav-link">
-          <span class="bottom-nav-icon">😊</span>
-          <span>Mood</span>
-        </a>
-        <a href="tools.html" class="bottom-nav-link">
-          <span class="bottom-nav-icon">🌿</span>
-          <span>Tools</span>
-        </a>
-        <a href="sleep.html" class="bottom-nav-link">
-          <span class="bottom-nav-icon">🌙</span>
-          <span>Sleep</span>
-        </a>
-        <a href="privacy.html" class="bottom-nav-link">
-          <span class="bottom-nav-icon">🔒</span>
-          <span>Privacy</span>
-        </a>
+      <div class="breathing-visual">
+        <div id="breathingOrb" class="breathing-orb"></div>
+        <p id="breathingCueText"></p>
       </div>
-    </nav>
+    </section>
 
-    <script src="app.js"></script>
-  </body>
+    <!-- Themes – Color Your Calm -->
+    <section id="themesSection" class="mb-section">
+      <h2>Color Your Calm</h2>
+      <div class="theme-grid">
+        <button class="theme-card" data-theme="theme-calm-ocean">
+          <span>Calm Ocean</span>
+        </button>
+        <button class="theme-card" data-theme="theme-warm-sunset">
+          <span>Warm Sunset</span>
+        </button>
+        <button class="theme-card" data-theme="theme-forest-quiet">
+          <span>Forest Quiet</span>
+        </button>
+        <button class="theme-card" data-theme="theme-midnight-sky">
+          <span>Midnight Sky</span>
+        </button>
+        <button class="theme-card" data-theme="theme-minimal-cloud">
+          <span>Minimal Cloud</span>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <nav class="bottom-nav">
+    <button data-target="homeSection">Home</button>
+    <button data-target="journalSection">Journal</button>
+    <button data-target="sleepSection">Sleep</button>
+    <button data-target="breathingSection">Breathe</button>
+    <button data-target="themesSection">Themes</button>
+  </nav>
+
+  <script src="app.js"></script>
+</body>
 </html>
-
 
